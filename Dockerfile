@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install vim -y --no-install-recommends
 RUN mkdir -p /opt/app
 RUN mkdir -p /opt/app/example_app
 COPY requirements.txt run-server.sh /opt/app/
+RUN chmod a+x /opt/app/run-server.sh
 COPY example_app /opt/app/example_app
 WORKDIR /opt/app
 RUN pip install -r requirements.txt
