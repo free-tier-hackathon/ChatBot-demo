@@ -21,7 +21,7 @@ RUN mkdir -p /var/www/nltk_data
 RUN chown -R www-data:www-data /var/www
 
 COPY example_app /opt/app/example_app
-COPY requirements.txt run-server.sh manage.py /opt/app/
+COPY requirements.txt run-server.sh manage.py train.py /opt/app/
 RUN chmod a+x /opt/app/run-server.sh
 
 WORKDIR /opt/app
