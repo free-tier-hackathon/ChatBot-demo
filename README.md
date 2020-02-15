@@ -18,9 +18,8 @@ Detailed guide can be found [here](https://aws.amazon.com/getting-started/tutori
 
 
  # High level overview
- ```
-![image info](./high_level_overview.png)
-```
+
+![image info](high_level_overview.png)
 
 
 # TODOs
