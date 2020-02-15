@@ -13,7 +13,7 @@ SECRET_KEY = 'fsch+6!=q+@ol&%0x!nwdl@48^ixbd4clx5f1i!5n^66y+pmn*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.eu-west-1.compute.amazonaws.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['.eu-west-1.compute.amazonaws.com', '.run.app', '127.0.0.1', 'localhost']
 
 
 # Application definition
