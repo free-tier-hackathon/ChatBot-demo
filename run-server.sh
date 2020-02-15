@@ -7,6 +7,7 @@ if [ -n "$DJANGO_SUPERUSER_USERNAME" ] && [ -n "$DJANGO_SUPERUSER_PASSWORD" ] ; 
 fi
 
 python manage.py migrate --run-syncdb
+python train.py
 
 (gunicorn example_app.wsgi --user www-data --bind 0.0.0.0:8000 --workers 1) &
 nginx -g "daemon off;"
