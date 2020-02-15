@@ -23,6 +23,7 @@ on:
 # Environment variables available to all jobs and steps in this workflow
 env:
   PROJECT_ID: ${{ secrets.RUN_PROJECT }}
+  LOG_BUCKET: ${{ secrets.BUILD_LOG_BUCKET }}
   RUN_REGION: europe-north1
   SERVICE_NAME: chatbot
 
@@ -50,7 +51,7 @@ jobs:
       # Build and push image to Google Container Registry
       - name: Build
         run: |
-          gcloud builds submit --gcs-log-dir=gs://build-logs-gy5o9th/logs -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA
+          gcloud builds submit --gcs-log-dir=gs://$LOG_BUCKET/logs -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA
 
       # Deploy image to Cloud Run
       - name: Deploy
