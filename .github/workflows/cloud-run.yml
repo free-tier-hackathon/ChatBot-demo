@@ -50,7 +50,7 @@ jobs:
       # Build and push image to Google Container Registry
       - name: Build
         run: |
-          gcloud builds submit -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA
+          gcloud builds submit --gcs-log-dir=gs://build-logs-gy5o9th/logs -t eu.gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA
 
       # Deploy image to Cloud Run
       - name: Deploy
