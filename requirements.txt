@@ -1,4 +1,4 @@
 gunicorn
 django>=2.2,<2.3
-chatterbot-corpus
 chatterbot>=0.8,<1.1
+chatterbot-corpus
