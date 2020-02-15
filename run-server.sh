@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-NLTK_DATA="/var/www/nltk_data"
-export $NLTK_DATA
+export NLTK_DATA="/var/www/nltk_data"
 
 if [ -n "$DJANGO_SUPERUSER_USERNAME" ] && [ -n "$DJANGO_SUPERUSER_PASSWORD" ] ; then
     (python manage.py createsuperuser --no-input)
