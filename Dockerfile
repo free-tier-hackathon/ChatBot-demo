@@ -11,7 +11,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
 
 # nginx needs permissions here
-RUN chown -R www-data:www-data /var/lib/nginx
+#RUN chown -R www-data:www-data /var/lib/nginx
 
 # copy source and install dependencies
 RUN mkdir -p /opt/app
@@ -30,5 +30,5 @@ RUN chown -R www-data:www-data /opt/app
 # start server
 EXPOSE 8080
 STOPSIGNAL SIGTERM
-USER www-data
+#USER www-data
 CMD ["/opt/app/run-server.sh"]
